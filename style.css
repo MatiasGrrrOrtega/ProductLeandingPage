@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #140024;
+    font-family: 'Montserrat', sans-serif;
+    color: #f0f8ff;
+    font-size: 1rem;
+    line-height: 1;
+    margin: 0;
+}
+
+h2{
+    color: #f0f8ff;
+    padding: 0 8px;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    vertical-align:middle;
+}
+
+/*SECTION NAV*/
+.navbar{
+    width: 100%;
+    background-color: #1d0035;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+.navbar a{
+    text-align: center;
+    text-decoration: none;
+    color: #f0f8ff;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 13px;
+    transition: .5s background ease-out;
+}
+
+.navbar a:hover{
+    background: #0ac91a;
+}
+/*SECTIN SERVICIOS*/
+h3{
+    margin: 0;
+    padding: 7px;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+ul,li{
+    margin: 0;
+}
+
+li{
+    background-color: #000000;
+}
+
+
+.slider{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 300%;
+    animation: slide 8s infinite alternate ease-in-out;
+}
+
+.slider li{
+    width: 100%;
+    height: 400px;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 80%;
+}
+
+@keyframes slide {
+    0%{margin-left: 0%;}
+    33%{margin-left: 0%;}
+
+    38%{margin-left: -100%;}
+    68%{margin-left: -100%;}
+
+    76%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+/*SECTION CRITICAS*/
+.container-criticas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grid-item{
+    width: 300px;
+    background-color: #1e0044;
+    text-align: center;
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 25px;
+    box-shadow: 0 0 1rem #191022;
+    color: #f0f8ff;
+}
+
+.img-user{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/*SECTION PRECIOS y HORARIOS*/
+.container-precios,
+.container-horarios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    margin: 4px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td{
+    border: 1px solid salmon;
+    background-color: #0c0b0b;
+}
+
+table thead, tbody{
+    text-align: center;
+}
+
+thead th{
+    padding: 7px;
+}
+
+tbody td{
+    padding: 14px;
+}
+
+/*SECTION UBICACION*/
+
+.cine{
+    margin: 4px 12px;
+    text-align: center;
+}
+
+/*SECTION FOOTER*/
+.form{
+    background-color: #4d018b;
+    border-radius: 25px;
+    margin: 13px;
+    padding: 13px;
+    text-align: center;
+}
+
+.form p{
+    margin: 6px;
+}
+
+.form input{
+    width: 250px;
+    height: 40px;
+    border-radius: 7px;
+    padding: 10px;
+    outline: none;
+}
+
+.form button{
+    width: 150px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 7px;
+    height: 30px;
+    background-color: #0ac91a;
+}
+
+.form button a{
+    color: #f0f8ff;
+    text-decoration: none;
+}
+
+.redes-sociales{
+    text-align: center;
+}
+
+.social-icon{
+    display: inline;
+    margin: 0 13px;
+}
+
+.social-icon a>svg{
+    text-decoration: none;
+    color: #f0f8ff;
+    width: 30px;
+}
+
+.footer-copyright{
+    color: #8a8a8a;
+    text-align: center;
+}
+
+/*PAGE PELICULAS*/
+.pelicula{
+    margin: 13px;
+}
+
+.img-cartelera{
+    text-align: center;
+}
+
+.img-pelicula{
+    width: 200px;
+    height: 300px;
+}
+
+@media (min-width:641px) and (max-width:1007px){
+    .navbar{
+        flex-direction: row;
+    }
+
+    .container-criticas{
+        grid-template-rows: 1fr;
+        grid-template-columns: auto ,repeat(4, 300px);;
+        grid-auto-flow: row;
+        color: #000000;
+    }
+}
+
+@media (min-width:1008px){
+    .navbar{
+        flex-direction: row;
+    }
+
+    .slider li{
+        height: 500px;
+    }
+}
